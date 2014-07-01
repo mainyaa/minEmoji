@@ -8,6 +8,7 @@
 	var regx_arr=[];
 	for(var k in emoji){
 		regx_arr.push(k);
+		regx_arr.push("&#"+k.charCodeAt()+";");
 	}
 	var regx = new RegExp('(' + regx_arr.join('|') + ')', 'g');
 	regx_arr = null;	
